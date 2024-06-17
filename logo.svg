@@ -5,14 +5,10 @@
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:svg="http://www.w3.org/2000/svg"
    xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   inkscape:version="1.0 (4035a4f, 2020-05-01)"
-   sodipodi:docname="logo.svg"
    version="1.1"
-   height="210mm"
-   width="297mm"
-   viewBox="0 0 1122.5197 793.70079"
+   height="176.24652mm"
+   width="205.8287mm"
+   viewBox="0 0 777.93527 666.12859"
    id="screenshot">
   <metadata
      id="metadata927">
@@ -28,29 +24,8 @@
   </metadata>
   <defs
      id="defs925" />
-  <sodipodi:namedview
-     inkscape:current-layer="screenshot"
-     inkscape:window-maximized="0"
-     inkscape:window-y="0"
-     inkscape:window-x="310"
-     inkscape:cy="-429.31284"
-     inkscape:cx="623.48559"
-     inkscape:zoom="0.38895398"
-     units="mm"
-     showgrid="false"
-     id="namedview923"
-     inkscape:window-height="1361"
-     inkscape:window-width="1891"
-     inkscape:pageshadow="2"
-     inkscape:pageopacity="0"
-     guidetolerance="10"
-     gridtolerance="10"
-     objecttolerance="10"
-     borderopacity="1"
-     bordercolor="#666666"
-     pagecolor="#ffffff" />
   <g
-     transform="matrix(2.4775008,0,0,2.4763144,172.29222,63.786107)"
+     transform="scale(2.4775008,2.4763144)"
      clip-path="url(#frame-clip-e7d0a860-2cbc-11ef-972c-df98dca8a79b-5cd87500-2cbf-11ef-a68d-1f1528a24f97)"
      id="shape-e7d0a860-2cbc-11ef-972c-df98dca8a79b">
     <defs
