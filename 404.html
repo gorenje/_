@@ -14,47 +14,57 @@ body {
     position:relative;
     background-color: white;
 }
-div.shadow {
-    position:absolute;
-    max-width:45%;
-    max-height:45%;
-    top:50%;
-    left:50%;
-    overflow:visible;
+
+div.maincontainer {
+    display: grid;
+    grid-template-columns: [side-col] 15% [first-col] auto [second-col] 15% [right-col];
+    grid-template-rows: [zero-row] 10vh [first-row] auto [second-row] auto [third-row];
+    row-gap: 15px;
 }
-div.top {
-    position:absolute;
-    width: 100%;
-    max-width: 100%;
-    max-height:45%;
-    top:10%;
-    text-align: center;
-    overflow:visible;
-    font-size: 31pt;
-}
-div.bottom {
-    position:absolute;
-    width: 100%;
-    max-width:100%;
-    max-height:45%;
-    top:70%;
-    overflow:visible;
-    text-align: center;
-    font-size: 31pt;
+
+
+div.logocontainer {
+   grid-column: first-col / second-col;
+   grid-row: first-row / second-row;
 }
 img.logo {
-    position:relative;
     max-width:100%;
     max-height:100%;
-    margin-top: -15vh;
-    margin-left: -30vw;
+    margin-top: 1vh;
+    margin-left: 1vw;
     min-width: 60vw;
+
 }
+@font-face {
+  font-family: Spartan;
+  font-weight: regular;
+  src: url("assets/font/SpartanMB-Regular.otf") format("opentype");
+}
+
+div.text {
+   grid-column: first-col / second-col;
+   grid-row: second-row / third-row;
+   font-family: Spartan;
+   font-weight: regular;
+   text-align: center;
+   padding-top: 2vh;
+   margin-bottom: 4vh;
+}
+
+a {
+  text-decoration: none;
+}
+
 </style>
   </head>
   <body>
-  <div class="shadow">
-    <img class="logo" src="logo.svg" />
-  </div>
+    <div class=maincontainer>
+      <div class="logocontainer">
+        <img class="logo" src="logo.svg" />
+      </div>
+      <div class=text>
+        <span>Vernissage / 13th of July 2024 / <a href="http://circylar.com/">CIRCYLAR gallery</a></span>
+      </div>
+    </div>
   </body>
 </head>
