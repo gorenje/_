@@ -8,6 +8,43 @@ body {
     margin:0px;
     position:relative;
     background-color: white;
+}
+
+@font-face {
+  font-family: Spartan;
+  font-weight: bold;
+  src: url("../assets/font/SpartanMB-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Spartan;
+  font-weight: regular;
+  src: url("../assets/font/SpartanMB-Regular.otf") format("opentype");
+}
+
+
+header, footer {
+   font-family: Spartan;
+   font-weight: regular;
+    width: 96vw;
+    margin-left: 2vw;
+   font-size: 2vh;
+}
+
+header {
+   margin-top: 1vh;
+   border-bottom: 1px solid black;
+}
+footer {
+    margin-top: 1vh;
+    padding-top: 1vh;
+   padding-bottom: 2vh;
+   font-size: 1vh;
+   border-top: 1px solid black;
+   text-align: center;
+}
+
+div.maincontainer {
     display: grid;
     grid-template-columns: [side-col] 15% [first-col] auto [second-col] 15% [right-col];
     grid-template-rows: [first-row] auto [second-row] auto [third-row] auto [fourth-row] auto [fifth-row];
@@ -19,7 +56,7 @@ body {
    grid-row: first-row / second-row;
    font-family: Spartan;
    font-weight: bold;
-   font-size: 4vw;;
+   font-size: 4vh;;
    width: 100%;
    text-align: center;
 }
@@ -34,13 +71,16 @@ div.frameimgcontainer {
 }
 
 .slidercontainer {
-  grid-column: first-col / second-col;
-  grid-row: third-row  / fourth-row;
+  grid-column-start: first-col;
+  grid-row-start: first-row;
+  z-index: 10;
+  padding-top: 125%;
 }
+
 
 div.sourceimgcontainer {
   grid-column: first-col / second-col;
-  grid-row: fourth-row  / fifth-row;
+  grid-row: third-row  / fourth-row;
 }
 
 div.logo {
@@ -60,19 +100,13 @@ img.logo {
   width: 100%;
 }
 
-@font-face {
-  font-family: Spartan;
-  font-weight: bold;
-  src: url("../assets/font/SpartanMB-Bold.otf") format("opentype");
-}
-
 
 /* The slider itself */
 .slider {
   -webkit-appearance: none;  /* Override default CSS styles */
   appearance: none;
 
-  height: 4vh; /* Specified height */
+  height: 1vh; /* Specified height */
   background: #d3d3d3; /* Grey background */
   outline: none; /* Remove outline */
   opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
@@ -80,7 +114,6 @@ img.logo {
   transition: opacity .2s;
 
   width: 100%;
-
 }
 
 /* Mouse-over effects */
@@ -91,15 +124,21 @@ img.logo {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 5vw; /* Set a specific slider handle width */
-  height: 5vh; /* Specified height */
-  background: #880000;
   cursor: pointer; /* Cursor on hover */
+  opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
+  width: 4vh; /* Set a specific slider handle width */
+  height: 4vh; /* Specified height */
+  background: linear-gradient(to bottom right, transparent 0%, transparent 50%, lightblue 50%, lightblue 100%);
+  transform: rotate(-225deg) translate(-35%,-35%);
 }
 
 .slider::-moz-range-thumb {
-  width: 5vw; /* Set a specific slider handle width */
-  height: 5vh; /* Specified height */
-  background: #880000;
+  appearance: none;
+  width: 4vh; /* Set a specific slider handle width */
+  height: 4vh; /* Specified height */
+  opacity: 0.9; /* Set transparency (for mouse-over effects on hover) */
   cursor: pointer; /* Cursor on hover */
+  background: linear-gradient(to bottom right, transparent 0%, transparent 50%, lightblue 50%, lightblue 100%);
+  transform: rotate(-225deg) translate(-35%,-35%);
+  border: 0px;
 }
