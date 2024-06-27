@@ -91,15 +91,15 @@ img.logo {
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default look */
   appearance: none;
-  width: 25px; /* Set a specific slider handle width */
+  width: 5vw; /* Set a specific slider handle width */
   height: 5vh; /* Specified height */
-  background: #000000;
+  background: #880000;
   cursor: pointer; /* Cursor on hover */
 }
 
 .slider::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
+  width: 5vw; /* Set a specific slider handle width */
   height: 5vh; /* Specified height */
-  background: #000000;
+  background: #880000;
   cursor: pointer; /* Cursor on hover */
 }
