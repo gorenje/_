@@ -4,22 +4,31 @@
     <link rel="stylesheet" href="../assets/style.css">
 
     <script>
-     function sliderOnInput(elem) {
-       var idx = Math.floor(elem.value / 100);
-       var nValue = (elem.value - (100 * idx));
+      function sliderOnInput(elem) {
+  var idx = Math.floor(elem.value / 100);
+  var nValue = (elem.value - (100 * idx));
 
-       for (var jdx = 0; jdx < idx; jdx++) {
-         document.getElementById("img"+jdx).style.opacity = 0
-       }
-       for (var jdx = idx + 2; jdx < 4; jdx++) {
-         document.getElementById("img"+jdx).style.opacity = 0
-       }
+  for (var jdx = 0; jdx < idx; jdx++) {
+    document.getElementById("img" + jdx).style.opacity = 0
+  }
+  for (var jdx = idx + 2; jdx < 4; jdx++) {
+    document.getElementById("img" + jdx).style.opacity = 0
+  }
 
-       document.getElementById("img"+idx).style.opacity = (100 - nValue) / 100
-       document.getElementById("img"+(idx+1)).style.opacity = nValue / 100
+  document.getElementById("img" + idx).style.opacity = (100 - nValue) / 100
+  document.getElementById("img" + (idx + 1)).style.opacity = nValue / 100
 
-       return false;
-     }
+  return false;
+}
+
+function slideTo(val, elem) {
+  for (var idx = 0; idx < document.getElementsByClassName("button-image").length; idx++) {
+    document.getElementsByClassName("button-image")[idx].style.background = "none"
+  }
+  try { sliderOnInput({ value: val }) } catch { }
+  elem.style.background = "blue"
+}
+
    </script>
   </head>
   <body>
@@ -45,8 +54,11 @@
           <img id="img1" width="1024" class=logo src="02.png"/>
           <img id="img0" width="1024" class=logo src="01.png"/>
 
-          <div class=slidercontainer>
-            <input type="range" min="0" max="300" step="1" value="300" class=slider oninput="javascript:sliderOnInput(this); return false;">
+          <div class="imgbuttoncontainer-four-buttons">
+            <div onclick="slideTo(0,this)" class="button-image one-img-button">1</div>
+            <div onclick="slideTo(100,this)" class="button-image two-img-button">2</div>
+            <div onclick="slideTo(200,this)" class="button-image three-img-button">3</div>
+            <div onclick="slideTo(300,this)" style="background: blue;" class="button-image four-img-button">4</div>
           </div>
 
         </div>
