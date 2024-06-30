@@ -49,6 +49,7 @@ div.maincontainer {
     grid-template-columns: [side-col] 15% [first-col] auto [second-col] 15% [right-col];
     grid-template-rows: [first-row] auto [second-row] auto [third-row] auto [fourth-row] auto [fifth-row];
     row-gap: 15px;
+    justify-content: center;
 }
 
 .title {
@@ -63,6 +64,16 @@ div.maincontainer {
 
 div.title {
     margin-top: 5%;
+}
+
+div.text {
+   grid-column: first-col / second-col;
+   grid-row: first-row / second-row;
+   font-family: Spartan;
+   font-weight: regular;
+   font-size: 2vh;;
+   width: 100%;
+   margin-top: 2vh;
 }
 
 div.frameimgcontainer {
@@ -80,6 +91,7 @@ div.frameimgcontainer {
   bottom: 0;
   left: 1px;
   width: 100%;
+  max-width: 1024px;
 
   display: grid;
   grid-template-rows: [first-row] 100% [second-row];
@@ -95,6 +107,7 @@ div.frameimgcontainer {
   bottom: 0;
   left: 1px;
   width: 100%;
+  max-width: 1024px;
 
   display: grid;
   grid-template-rows: [first-row] 100% [second-row];
@@ -162,4 +175,5 @@ img.logo {
   border: 1px #030303 solid;
   opacity: 0;
   width: 100%;
+  max-width: 1024px;
 }
