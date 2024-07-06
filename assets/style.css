@@ -47,7 +47,7 @@ footer {
 div.maincontainer {
     display: grid;
     grid-template-columns: [side-col] 15% [first-col] auto [second-col] 15% [right-col];
-    grid-template-rows: [first-row] auto [second-row] auto [third-row] auto [fourth-row] auto [fifth-row];
+    grid-template-rows: [first-row] auto [second-row] auto [third-row] auto [fourth-row] auto [fifth-row] auto [sixth-row];;
     row-gap: 15px;
     justify-content: center;
 }
@@ -82,13 +82,36 @@ div.frameimgcontainer {
 }
 
 
+div.text-source {
+  grid-column: first-col / second-col;
+  grid-row: third-row / fourth-row;
+
+   text-align: center;
+}
+
+div.sourceimgcontainer {
+  grid-column: first-col / second-col;
+  grid-row: fourth-row / fifth-row;
+}
+
+div.text-source > span {
+  font-family: Spartan;
+  font-weight: regular;
+   font-weight: regular;
+   font-size: 2.2vh;;
+   width: 100%;
+   margin-top: 2vh;
+   text-align: center;
+}
+
+
 .imgbuttoncontainer-six-buttons {
   grid-column-start: first-col;
   grid-row-start: first-row;
 
   z-index: 10;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 1px;
   width: 100%;
   max-width: 1024px;
@@ -104,7 +127,7 @@ div.frameimgcontainer {
 
   z-index: 10;
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 1px;
   width: 100%;
   max-width: 1024px;
@@ -115,7 +138,7 @@ div.frameimgcontainer {
 }
 
 .button-image {
-  border-top: 1px solid white;
+  border-bottom: 1px solid white;
   border-left: 1px solid white;
   border-right: 1px solid white;
   opacity: 0.7;
@@ -151,12 +174,6 @@ div.frameimgcontainer {
 .six-img-button {
   grid-column: six-col / seven-col;
   grid-row: first-row / second-row;
-}
-
-
-div.sourceimgcontainer {
-  grid-column: first-col / second-col;
-  grid-row: third-row  / fourth-row;
 }
 
 div.logo {
