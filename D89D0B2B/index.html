@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <title>raisen.art/D89D0B2B</title>
+    <link rel="stylesheet" href="../assets/style.css">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon/favicon.ico">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+
+    <meta property="og:title" content="raisen.art - D89D0B2B" />
+    <meta property="og:description" content="Gerard Raisen" />
+    <meta property="og:locale" content="en_AU" />
+    <meta property="og:url" content="https://raisen.art/D89D0B2B" />
+    <meta property="og:site_name" content="raisen.art" />
+    <meta property="og:image" content="https://raisen.art/D89D0B2B/00.png" />
+
+    <meta name="twitter:card" content="https://raisen.art/D89D0B2B" />
+    <meta property="twitter:title" content="Gerard Raisen - https://raisen.art - D89D0B2B" />
+
+    <script>
+      function sliderOnInput(elem) {
+  var idx = Math.floor(elem.value / 100);
+  var nValue = (elem.value - (100 * idx));
+
+  for (var jdx = 0; jdx < idx; jdx++) {
+    document.getElementById("img" + jdx).style.opacity = 0
+  }
+  for (var jdx = idx + 2; jdx < 6; jdx++) {
+    document.getElementById("img" + jdx).style.opacity = 0
+  }
+
+  document.getElementById("img" + idx).style.opacity = (100 - nValue) / 100
+  document.getElementById("img" + (idx + 1)).style.opacity = nValue / 100
+
+  return false;
+}
+
+function slideTo(val, elem) {
+  for (var idx = 0; idx < document.getElementsByClassName("button-image").length; idx++) {
+    document.getElementsByClassName("button-image")[idx].style.background = "none"
+  }
+  try { sliderOnInput({ value: val }) } catch { }
+  elem.style.background = "blue"
+}
+
+   </script>
+  </head>
+  <body>
+    <header>
+      <a href="/">The Presidents Prints</a>
+    </header>
+
+    <div class=maincontainer>
+      <div class=title>
+        <span>D89D0B2B</span>
+      </div>
+
+      <div class=frameimgcontainer>
+        <img width="1024" style="opacity: 1" class=logo src="00.png"/>
+      </div>
+
+      <div class=text-source>
+        <span>Found At</span>
+      </div>
+
+      <div class="sourceimgcontainer">
+        <div class=logo>
+          <img id="img5" width="1024" style="opacity: 1" class=logo src="06.png"/>
+          <img id="img4" width="1024" class=logo src="05.png"/>
+          <img id="img3" width="1024" class=logo src="04.png"/>
+          <img id="img2" width="1024" class=logo src="03.png"/>
+          <img id="img1" width="1024" class=logo src="02.png"/>
+          <img id="img0" width="1024" class=logo src="01.png"/>
+
+          <div class="imgbuttoncontainer-six-buttons">
+            <div onclick="slideTo(0,this)" class="button-image one-img-button">1</div>
+            <div onclick="slideTo(100,this)" class="button-image two-img-button">2</div>
+            <div onclick="slideTo(200,this)" class="button-image three-img-button">3</div>
+            <div onclick="slideTo(300,this)" class="button-image four-img-button">4</div>
+            <div onclick="slideTo(400,this)" class="button-image five-img-button">5</div>
+            <div onclick="slideTo(500,this)" style="background: blue;" class="button-image six-img-button">6</div>
+          </div>
+
+
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      Copyright &copy; Gerard Raisen<br/>
+      <a href="/about">Purchase</a>
+    </footer>
+  </body>
+</head>
