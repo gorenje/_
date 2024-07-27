@@ -1,0 +1,9 @@
+/* TEAM */
+    Artist: Gerard Raisen
+    Email: gerard@raisen.art
+    Website: https://raisen.art
+    Instagram: @gerard.raisen
+
+    Author: Gerrit Riessen
+    Email: gerrit@openmindmap.org
+    LinkedIn: https://www.linkedin.com/in/gardyloo/
