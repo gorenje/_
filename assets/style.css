@@ -2,6 +2,7 @@ html {
     width:100%;
     height:100%;
 }
+
 body {
     width:100%;
     height:100%;
@@ -18,14 +19,14 @@ body {
 
 @font-face {
   font-family: Spartan;
-  font-weight: regular;
+  font-weight: normal;
   src: url("../assets/font/SpartanMB-Regular.otf") format("opentype");
 }
 
 
 header, footer {
    font-family: Spartan;
-   font-weight: regular;
+   font-weight: normal;
     width: 96vw;
     margin-left: 2vw;
    font-size: 2vh;
@@ -52,7 +53,7 @@ footer {
 div.maincontainer {
     display: grid;
     grid-template-columns: [side-col] 15% [first-col] auto [second-col] 15% [right-col];
-    grid-template-rows: [first-row] auto [second-row] auto [third-row] auto [fourth-row] auto [fifth-row] auto [sixth-row];;
+    grid-template-rows: [first-row] auto [second-row] auto [third-row] auto [fourth-row] auto [fifth-row] auto [sixth-row] auto [seventh-row];
     row-gap: 15px;
     justify-content: center;
 }
@@ -75,7 +76,7 @@ div.text {
    grid-column: first-col / second-col;
    grid-row: first-row / second-row;
    font-family: Spartan;
-   font-weight: regular;
+   font-weight: normal;
    font-size: 2vh;;
    width: 100%;
    margin-top: 2vh;
@@ -87,28 +88,78 @@ div.frameimgcontainer {
 }
 
 
-div.text-source {
+div.tour {
   grid-column: first-col / second-col;
   grid-row: third-row / fourth-row;
 
-   text-align: center;
+  text-align: center;
+
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+
+  width: 100%;
+  display: grid;
+  grid-template-rows: [first-row] 100% [second-row];
+  grid-template-columns: [one-col] 33% [two-col] 33% [three-col];
+
+}
+
+div.text-source {
+  grid-column: first-col / second-col;
+  grid-row: fourth-row / fifth-row;
+
+  text-align: center;
 }
 
 div.sourceimgcontainer {
   grid-column: first-col / second-col;
-  grid-row: fourth-row / fifth-row;
+  grid-row: fifth-row / sixth-row;
 }
 
-div.text-source > span {
+div.text-source > span, div.tour > .title, div.tour > .prev, div.tour > .next {
   font-family: Spartan;
-  font-weight: regular;
-   font-weight: regular;
-   font-size: 2.2vh;;
-   width: 100%;
-   margin-top: 2vh;
-   text-align: center;
+  font-weight: normal;
+  font-size: 2.2vh;;
+  width: 100%;
+  margin-top: 2vh;
+  text-align: center;
 }
 
+div.tour > .prev, div.tour > .next, div.tour > .title {
+  font-size: 1.5vh;
+  margin-top: 0.2vh;
+  margin-bottom: 0.2vh;
+}
+
+div.tour > .prev, div.tour > .next {
+  font-size: 2.5vh;
+}
+
+div.tour > .title {
+    display: none;
+}
+
+div.tour a {
+  text-decoration: none;
+}
+
+div.tour > .prev{
+  grid-column: one-col / two-col;
+  grid-row-start: first-row;
+  text-align: left;
+}
+
+div.tour > .title {
+  grid-column: two-col / three-col;
+  grid-row-start: first-row;
+  text-align: center;
+}
+
+div.tour > .next {
+  grid-column-start: three-col;
+  grid-row-start: first-row;
+  text-align: right;
+}
 
 .imgbuttoncontainer-six-buttons {
   grid-column-start: first-col;
@@ -148,7 +199,7 @@ div.text-source > span {
   border-right: 1px solid white;
   opacity: 0.7;
   font-family: Spartan;
-  font-weight: regular;
+  font-weight: normal;
   text-align: center;
   height: 2vh;
   min-height: 30px;
