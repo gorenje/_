@@ -52,7 +52,7 @@ footer {
 
 div.maincontainer {
     display: grid;
-    grid-template-columns: [side-col] 15% [first-col] auto [second-col] 15% [right-col];
+    grid-template-columns: [side-col] 5% [frameimg-col-start] 10% [first-col] auto [second-col] 10% [frameimg-col-end] 5% [right-col];
     grid-template-rows: [first-row] auto [second-row] auto [third-row] auto [fourth-row] auto [fifth-row] auto [sixth-row] auto [seventh-row];
     row-gap: 15px;
     justify-content: center;
@@ -83,10 +83,13 @@ div.text {
 }
 
 div.frameimgcontainer {
-  grid-column: first-col / second-col;
+  grid-column: frameimg-col-start / frameimg-col-end;
   grid-row: second-row  / third-row;
 }
 
+div.frameimgcontainer > img {
+    max-width: 2048px;
+}
 
 div.tour {
   grid-column: first-col / second-col;
