@@ -27,9 +27,9 @@ body {
 header, footer {
    font-family: Spartan;
    font-weight: normal;
-    width: 96vw;
-    margin-left: 2vw;
-   font-size: 2vh;
+   width: 96vw;
+   margin-left: 2vw;
+   font-size: min( max(25px, 2vh), 32px);
 }
 
 header {
@@ -128,7 +128,7 @@ div.sourceimgcontainer {
 div.text-source > span, div.tour > .title, div.tour > .prev, div.tour > .next {
   font-family: Spartan;
   font-weight: normal;
-  font-size: calc(10px + 1.5vh);
+  font-size: min( max(20px, 1.5vh), 32px);
   width: 100%;
   margin-top: 2vh;
   text-align: center;
@@ -141,7 +141,7 @@ div.tour > .prev, div.tour > .next, div.tour > .title {
 }
 
 div.tour > .prev, div.tour > .next {
-    font-size: calc(23px + 2.5vh);
+   font-size: min( max(28px, 2.5vh), 40px);
 }
 
 div.tour > .title {
