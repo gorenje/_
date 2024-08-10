@@ -89,6 +89,8 @@ div.frameimgcontainer {
 
 div.frameimgcontainer > img {
     max-width: 2048px;
+    min-width: 50vw;
+    min-height: 50vh;
 }
 
 div.tour {
@@ -196,6 +198,14 @@ div.sourceimgcontainer > img.logo {
     display: none;
 }
 
+div.sourceimgcontainer > img {
+    max-height: 100%;
+    width: 100%;
+    min-height: 15vh;
+    min-width: 15vw;
+    object-fit: cover;
+    background-size: cover;
+}
 
 div.sourceimgcontainer-siximg {
   display: grid;
