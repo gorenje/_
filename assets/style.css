@@ -165,6 +165,119 @@ div.tour > .next {
   text-align: right;
 }
 
+div.logo {
+  position: relative;
+  display: grid;
+  grid-template-columns: [first-col] 100%;
+  grid-template-rows: [first-row] 100%;
+}
+
+img.logo {
+  grid-column-start: first-col;
+  grid-row-start: first-row;
+  max-width:100%;
+  max-height:100%;
+  margin-top: 0px;
+  border: 1px #030303 solid;
+  opacity: 0;
+  width: 100%;
+  max-width: 1024px;
+}
+
+/*
+// This is the setup for a comic layout of the source images.
+*/
+
+div.sourceimgcontainer > img.logo {
+    max-width: 768px;
+}
+
+.imgbuttoncontainer-six-buttons, .imgbuttoncontainer-four-buttons {
+    display: none;
+}
+
+
+div.sourceimgcontainer-siximg {
+  display: grid;
+  grid-template-rows: [first-row] auto [second-row] auto [third-row];
+  grid-template-columns: [one-col] auto [two-col] auto [three-col] auto [four-col];
+  grid-gap: 10px;
+}
+
+div.sourceimgcontainer-siximg > #img0 {
+  opacity: 1;
+  grid-column: one-col / two-col;
+  grid-row-start: first-row;
+}
+
+div.sourceimgcontainer-siximg > #img1 {
+  opacity: 1;
+  grid-column: two-col / three-col;
+  grid-row-start: first-row;
+}
+
+div.sourceimgcontainer-siximg > #img2 {
+  opacity: 1;
+  grid-column: three-col / four-col;
+  grid-row-start: first-row;
+}
+
+div.sourceimgcontainer-siximg > #img3 {
+  opacity: 1;
+  grid-column: one-col / two-col;
+  grid-row-start: second-row;
+}
+
+div.sourceimgcontainer-siximg > #img4 {
+  opacity: 1;
+  grid-column: two-col / three-col;
+  grid-row-start: second-row;
+}
+
+div.sourceimgcontainer-siximg > #img5 {
+  opacity: 1;
+  grid-column: three-col / four-col;
+  grid-row-start: second-row;
+}
+
+
+div.sourceimgcontainer-fourimg {
+  display: grid;
+  grid-template-rows: [first-row] auto [second-row] auto [third-row];
+  grid-template-columns: [one-col] auto [two-col] auto [three-col];
+  grid-gap: 10px;
+}
+
+div.sourceimgcontainer-fourimg > #img0 {
+  opacity: 1;
+  grid-column: one-col / two-col;
+  grid-row-start: first-row;
+}
+
+div.sourceimgcontainer-fourimg > #img1 {
+  opacity: 1;
+  grid-column: two-col / three-col;
+  grid-row-start: first-row;
+}
+
+div.sourceimgcontainer-fourimg > #img2 {
+  opacity: 1;
+  grid-column: one-col / two-col;
+  grid-row-start: second-row;
+}
+
+div.sourceimgcontainer-fourimg > #img3 {
+  opacity: 1;
+  grid-column: two-col / three-col;
+  grid-row-start: second-row;
+}
+
+
+
+/*
+
+// This is the settings for having a bunch of navigation buttons for switching between images.
+
 .imgbuttoncontainer-six-buttons {
   grid-column-start: first-col;
   grid-row-start: first-row;
@@ -236,21 +349,4 @@ div.tour > .next {
   grid-row: first-row / second-row;
 }
 
-div.logo {
-  position: relative;
-  display: grid;
-  grid-template-columns: [first-col] 100%;
-  grid-template-rows: [first-row] 100%;
-}
-
-img.logo {
-  grid-column-start: first-col;
-  grid-row-start: first-row;
-  max-width:100%;
-  max-height:100%;
-  margin-top: 0px;
-  border: 1px #030303 solid;
-  opacity: 0;
-  width: 100%;
-  max-width: 1024px;
-}
+*/
