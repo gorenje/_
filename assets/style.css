@@ -128,20 +128,20 @@ div.sourceimgcontainer {
 div.text-source > span, div.tour > .title, div.tour > .prev, div.tour > .next {
   font-family: Spartan;
   font-weight: normal;
-  font-size: 2.2vh;;
+  font-size: calc(10px + 1.5vh);
   width: 100%;
   margin-top: 2vh;
   text-align: center;
 }
 
 div.tour > .prev, div.tour > .next, div.tour > .title {
-  font-size: 1.5vh;
+  font-size: calc(23px + 1.5vh);
   margin-top: 0.2vh;
   margin-bottom: 0.2vh;
 }
 
 div.tour > .prev, div.tour > .next {
-  font-size: 2.5vh;
+    font-size: calc(23px + 2.5vh);
 }
 
 div.tour > .title {
